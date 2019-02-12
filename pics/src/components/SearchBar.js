@@ -4,7 +4,7 @@ class SearchBar extends React.Component {
   state = {term: ''};
 
   onFormSubmit = event => {
-    event.preventDefault();
+    event.preventDefault(); //prevent Enter xong deo ra cai lon gi ca
 
     this.props.onSubmit(this.state.term);
   };
