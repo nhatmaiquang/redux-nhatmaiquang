@@ -1,7 +1,11 @@
 import React from 'react';
 
-const ImageList = () => {
-  return <div>ImageList</div>;
+const ImageList = props => {
+  const images = props.images.map((image) => {
+    return <img alt={image.description} key={image.id} src={image.urls.regular}/> // dung quen phai co id nua dit me
+  });
+
+  return <div>{images}</div>;
 };
 
 export default ImageList;

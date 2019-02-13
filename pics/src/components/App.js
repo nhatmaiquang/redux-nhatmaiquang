@@ -20,7 +20,7 @@ class App extends React.Component {
       <div className="ui container" style={{ marginTop: '10px'}}>
         <SearchBar onSubmit={this.onSearchSubmit}/>
         Dit me bo may tim thay {this.state.images.length} cai lon
-        <ImageList />
+        <ImageList images={this.state.images} />
       </div>
     );
   }
