@@ -3,8 +3,13 @@ import { Field, reduxForm } from 'redux-form';
 
 // const StreamCreate = () => {
 class StreamCreate extends React.Component {
-  renderInput({ input }) {
-    return <input {...input} />;
+  renderInput({ input, label }) {
+    return (
+      <div className="field">
+        <label>{label}</label>
+        <input {...input} />
+      </div>
+    );
     /*
     return (
       <input
@@ -16,9 +21,9 @@ class StreamCreate extends React.Component {
 
   render() {
     return (
-      <form>
-        <Field name="title" component={this.renderInput} />
-        <Field name="description" component={this.renderInput} />
+      <form className="ui form">
+        <Field name="title" component={this.renderInput} label="Thêm Title"/>
+        <Field name="description" component={this.renderInput} label="Thêm Description"/>
       </form>
     );
   };
